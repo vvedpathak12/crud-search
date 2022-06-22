@@ -1,0 +1,111 @@
+
+
+    <!-- form-2 starts -->
+
+
+    <div class="container w-50">
+        <div class="row">
+    
+            <div class="col-md-12">
+                <form class="form1 alert alert-success mt-4" [formGroup]="myForm2" (ngSubmit)="onSubmitForm2()">
+    
+                    <!-- <h2 class="text-center mb-5"><b>Student Registration Form</b></h2> -->
+                    <h1 class="text-center heading-1 "><b>Edit Information</b></h1>
+    
+                    <div class="form-wrap mt-5">
+    
+                        <div class="row">
+    
+                            <div class="col-md-12">
+                                <div class="form-group px-3">
+                                    <label class="mb-2">Name :- <span style="color: red;">*</span> </label>
+                                    <input type="text" class="form-control" formControlName="name"
+                                    required [ngClass]="{'is-invalid' : isSubmitted &&f2.name.errors}"
+                                    placeholder="Enter your name">
+    
+                                    <div *ngIf="isSubmitted &&f2.name.errors?.required" class="invalid-feedback">Name is required</div>
+                                </div><br>
+                            </div>
+    
+    
+                        </div>
+    
+    
+                        <div class="row">
+    
+                            <div class="col-md-6">
+    
+                                <div class="form-group px-3">
+                                    <label class="mb-2">Age :- <span style="color: red;">*</span></label>
+                                    <input type="number" class="form-control" formControlName = "age"
+                                    required [ngClass]="{'is-invalid' : isSubmitted &&f2.age.errors}"
+                                    placeholder="Enter your age">
+                                    <div *ngIf="isSubmitted &&f2.age.errors?.required" class="invalid-feedback">This field is mandatory !! </div>
+                                </div><br>
+    
+                            </div>
+
+                            <div class="col-md-6">
+    
+                                <div class="form-group px-3">
+                                    <label class="mb-2">Branch :- <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" formControlName = "branch"
+                                    required [ngClass]="{'is-invalid' : isSubmitted &&f2.branch.errors}"
+                                    placeholder="Enter your Branch ">
+                                    <div *ngIf="isSubmitted &&f2.branch.errors?.required" class="invalid-feedback">This field is mandatory !! </div>
+                                </div><br>
+    
+                            </div>
+    
+                        </div>
+    
+    
+                        <div class="row">
+    
+                            <div class="col-md-6">
+    
+                                <div class="form-group px-3">
+                                    <label class="mb-2">Emp Id :- <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" formControlName = "empId"
+                                    required [ngClass]="{'is-invalid' : isSubmitted &&f2.empId.errors}"
+                                    placeholder="Enter Emp Id">
+                                    <div *ngIf="isSubmitted &&f2.empId.errors?.required" class="invalid-feedback">This field is mandatory !! </div>
+                                </div><br>
+    
+                            </div>
+    
+    
+                            <div class="col-md-6">
+    
+                                <div class="form-group px-3">
+                                    <label class="mb-2">City :- <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" formControlName = "city"
+                                    required [ngClass]="{'is-invalid' : isSubmitted &&f2.city.errors}"
+                                    placeholder="Enter your city ">
+                                    <div *ngIf="isSubmitted && f2.city.errors?.required" class="invalid-feedback">This field is mandatory !! </div>
+                                </div><br>
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn bg-warning btn-1" >Submit</button>
+                        </div><br>
+                    </div>
+                
+                    
+                </form>
+            </div>
+    
+            
+            
+        </div>
+    
+    
+    
+        
+    </div>
+    
+    <!-- form-2 ends -->
+    

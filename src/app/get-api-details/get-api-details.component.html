@@ -1,0 +1,47 @@
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+
+            <button class="btn bg-info fs-4 float-end mb-4" (click)="addData()">Add Data</button>
+            
+            <div>
+                <!-- <label for="">Search by name</label> -->
+                <input type="search" class="form-control mb-3" id="search" placeholder="Search by name" [(ngModel)]="nameSearch">
+            </div>
+
+            <table class="table table-responsive alert alert-info">
+                
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Branch</th>
+                    <th>Emp Id</th>
+                    <th>City</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+
+                <tr *ngFor="let dt of info | filterdata : nameSearch">
+                    <td>{{dt.id}}</td>
+                    <td>{{dt.name}}</td>
+                    <td>{{dt.age}}</td>
+                    <td>{{dt.branch}}</td>
+                    <td>{{dt.empId}}</td>
+                    <td>{{dt.city}}</td>
+                    <td><button class="btn bg-warning p-3" (click)="onEdit(dt.id , dt)">Edit</button></td>
+                    <td><button class="btn bg-danger p-3" (click)="onDelete(dt.id)">Delete</button></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+</div>
